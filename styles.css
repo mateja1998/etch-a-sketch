@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    width: 1000px;
+    height: 1000px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#container div {
+    background-color: goldenrod;
+    width: calc(25% - 5px);
+    height: 245px;
+
+}
