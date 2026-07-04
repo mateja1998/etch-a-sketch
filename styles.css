@@ -1,18 +1,24 @@
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #container {
     display: flex;
-    width: 1000px;
-    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 800px;
     gap: 5px;
+    margin: 50px 0;
     flex-wrap: wrap;
 }
 
 #container div {
     background-color: goldenrod;
     width: calc(25% - 5px);
-    height: 245px;
+    height: 195px;
 
 }
