@@ -2,9 +2,6 @@ const container = document.querySelector("#container");
 const gridButton = document.querySelector("#grid-btn");
 
 
-
-
-
 gridButton.addEventListener("click", () => {
     removeOldGrid();
     let gridSize = Number(prompt("Enter number of squares per one side of the grid:"));
@@ -14,7 +11,11 @@ gridButton.addEventListener("click", () => {
         generateGrid(gridSize);
         const squares = document.querySelectorAll(".square");
         squares.forEach(square => {
-            square.addEventListener("mouseenter", () => square.style.backgroundColor = "red");
+            let rgb = generateRandomColor();
+            opacity += 0.1;
+            square.addEventListener("mouseenter", () =>{ 
+                square.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+            } );
         })
     }
 
@@ -36,8 +37,14 @@ function removeOldGrid() {
         const squares = document.querySelectorAll(".square");
         squares.forEach(square => {
             container.removeChild(square);
-            console.log("child removed");
         })
     }
 }
 
+
+function generateRandomColor(){
+    const randomR = Math.floor(Math.random() * 255);
+    const randomG = Math.floor(Math.random() * 255);
+    const randomB = Math.floor(Math.random() * 255);
+    return [randomR, randomG, randomB];
+}
