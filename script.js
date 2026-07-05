@@ -11,11 +11,12 @@ gridButton.addEventListener("click", () => {
         generateGrid(gridSize);
         const squares = document.querySelectorAll(".square");
         squares.forEach(square => {
+            let opacity = 0.1;
             let rgb = generateRandomColor();
-            opacity += 0.1;
-            square.addEventListener("mouseenter", () =>{ 
-                square.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
-            } );
+            square.addEventListener("mouseenter", () => {
+                square.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
+                opacity += 0.1;
+            });
         })
     }
 
@@ -42,7 +43,7 @@ function removeOldGrid() {
 }
 
 
-function generateRandomColor(){
+function generateRandomColor() {
     const randomR = Math.floor(Math.random() * 255);
     const randomG = Math.floor(Math.random() * 255);
     const randomB = Math.floor(Math.random() * 255);
