@@ -3,6 +3,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#grid-btn {
+    margin-top: 30px;
+    font-size: 20px;
 }
 
 #container {
@@ -10,8 +16,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 800px;
+    min-width: 800px;
     gap: 5px;
-    margin: 50px 0;
+    margin: 30px 0;
     flex-wrap: wrap;
 }
 
@@ -20,3 +27,4 @@ body {
     width: 45px;
     height: 45px;
 }
+
