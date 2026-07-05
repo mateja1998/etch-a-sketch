@@ -11,11 +11,9 @@ gridButton.addEventListener("click", () => {
         generateGrid(gridSize);
         const squares = document.querySelectorAll(".square");
         squares.forEach(square => {
-            let opacity = 0.1;
-            let rgb = generateRandomColor();
             square.addEventListener("mouseenter", () => {
-                square.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
-                opacity += 0.1;
+                let rgb = generateRandomColor();
+                square.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
             });
         })
     }
