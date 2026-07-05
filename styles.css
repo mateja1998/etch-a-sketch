@@ -10,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 800px;
-    height: 800px;
     gap: 5px;
     margin: 50px 0;
     flex-wrap: wrap;
@@ -18,7 +17,6 @@ body {
 
 #container div {
     background-color: goldenrod;
-    width: calc(25% - 5px);
-    height: 195px;
-
+    width: 45px;
+    height: 45px;
 }
